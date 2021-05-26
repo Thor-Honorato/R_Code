@@ -1,8 +1,7 @@
 #---------------------------------------------------------------------------
 
-#ALUNO: Wesley Honorato Pontes
-#MATRÍCULA: 16212577
-#CURSO: Engenharia de Computação - UFAL
+#ALUNO: Honorato Thor
+#CURSO: Engenharia de Computação
 
 #---------------------------------------------------------------------------
 
@@ -18,7 +17,7 @@ FreqRel <- prop.table(Freq)
 FreqRelAc <- cumsum(FreqRel)
 
 TabResul = cbind(Freq, FreqAc, FreqRel = round(FreqRel*100, digits = 2), 
-                FreqRelAc = round(FreqRelAc*100, digits = 2))
+FreqRelAc = round(FreqRelAc*100, digits = 2))
 #Gráfico:       
 barplot(table(Dados),
         main = "Distribuição dos Dados",
