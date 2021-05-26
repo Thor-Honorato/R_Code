@@ -1,6 +1,6 @@
 
-# Aluno: Wesley Honorato Pontes
-# Matrícula: 16212577
+# Aluno: Honorato Thor
+
 
 #Valores:
 
@@ -8,29 +8,29 @@ value <- c(26, 24, 23, 22, 28, 25, 27, 26, 28,
            24, 27, 25, 20, 24, 24, 27, 25, 31)
 
 #--------------------------------------------------------------------------
-# 1º) xx = 31.
+# 1Âº) xx = 31.
 
-# Letra a) Analizar o nível de Significancia:
+# Letra a) Analizar o nÃ­vel de Significancia:
 
 
-# >> Utilizando a função t.test <<
+# >> Utilizando a funÃ§Ã£o t.test <<
 
 t.test(value, mu = 26)
 
-# Value = Valores da Questão.
-# mu = Média Dada na Questão ( 26mg ).
+# Value = Valores da QuestÃ£o.
+# mu = MÃ©dia Dada na QuestÃ£o ( 26mg ).
 
-# Letra b) Analizar o Nível de Confiança
+# Letra b) Analizar o NÃ­vel de ConfianÃ§a
 
 t.test(value, conf = 0.92, mu = 26)
 
-# Value = Valores da Questão.
-# Conf = Nível Percentual do Intervalo de Confiança.
-# mu = Média Dada na Questão ( 26mg ).
+# Value = Valores da QuestÃ£o.
+# Conf = NÃ­vel Percentual do Intervalo de ConfianÃ§a.
+# mu = MÃ©dia Dada na QuestÃ£o ( 26mg ).
 
 
 #--------------------------------------------------------------------------
-# 2º) Xn = 5 ; Yn = ~ 6,58 ; Zn = ~ 6,42.
+# 2Âº) Xn = 5 ; Yn = ~ 6,58 ; Zn = ~ 6,42.
 
 #Letra a)
 
@@ -43,37 +43,37 @@ Z <- c(6.58, 5.76, 7.71, 8.84, 8.47, 7.04, 5.25, 10.50, 5.25, 7.91, 6.42)
 df <- data.frame(X, Y, Z)
 cor(df)
 
-# Calculando os Coeficientes de Correlações
+# Calculando os Coeficientes de CorrelaÃ§Ãµes
 cor(X,Y)
 cor(X,Z)
 cor(Y,Z)
 
-# Letra b) 2 Variáveis com Maior Correlação e calcular a Equação da Reta
-# e o Coeficiente de Determinação de Pearson (R2)
+# Letra b) 2 VariÃ¡veis com Maior CorrelaÃ§Ã£o e calcular a EquaÃ§Ã£o da Reta
+# e o Coeficiente de DeterminaÃ§Ã£o de Pearson (R2)
 
 cor.test(df$X, df$Y, mothod = "pearson")
 
 summary(lm(df$Y ~ df$X))
 
 # Na parte "Coefficients:"
-#  Equação: Y = (Estimate (df$X))x + (Estimate (Intercept))
-#  R² = (R-squared)
+#  EquaÃ§Ã£o: Y = (Estimate (df$X))x + (Estimate (Intercept))
+#  RÂ² = (R-squared)
 
-# Letra c) Os Resíduos são aderentes à distribuição normal?
-# E com qual nível de significância ?
+# Letra c) Os ResÃ­duos sÃ£o aderentes Ã  distribuiÃ§Ã£o normal?
+# E com qual nÃ­vel de significÃ¢ncia ?
 
 #No final da Tabela dada acima tera os valores:
 #"Residual Standar Error: (value) on 9 degress of freedom"
-#   Significa que Resíduos aderem à distribuição normal com nível de
-#   significancia de 9% para erro residual padrão de (valor dado).
+#   Significa que ResÃ­duos aderem Ã  distribuiÃ§Ã£o normal com nÃ­vel de
+#   significancia de 9% para erro residual padrÃ£o de (valor dado).
 
 shapiro.test(lm(df$Y ~ df$X)$residuals) #Analizar Residuos em Teste Normal
 
 
 #--------------------------------------------------------------------------
-# 3º) Xx = 51 ; Yy = 55 ; Zz = 62.
+# 3Âº) Xx = 51 ; Yy = 55 ; Zz = 62.
 
-# Aplicando todos os Dados sem importação de tabela:
+# Aplicando todos os Dados sem importaÃ§Ã£o de tabela:
 Fabrica <- c("Atlanta", "Atlanta", "Atlanta", "Atlanta", "Atlanta", 
              "Atlanta", "Atlanta", "Dallas", "Dallas", "Dallas", 
              "Dallas", "Dallas", "Dallas", "Dallas", "Seatle", "Seatle", 
@@ -98,19 +98,19 @@ summary(result) # Mostrar a tabela
 
 
 #--------------------------------------------------------------------------
-# 4º) Xta = 355 ; Xtn = 359.
+# 4Âº) Xta = 355 ; Xtn = 359.
 
-# Letra a) Calcular o Intervalo de Confiança com 2% de Significância
+# Letra a) Calcular o Intervalo de ConfianÃ§a com 2% de SignificÃ¢ncia
 # para os valores de 'TecNova'
 
 TecAtual <- c(300, 280, 344, 385, 372, 360, 288, 321, 376, 290, 301, 355)
 
 TecNova <- c(274, 220, 308, 336, 198, 300, 315, 258, 318, 310, 273, 359)
 
-# Intervalo de Confiança de 98%, Utilizando a Função
+# Intervalo de ConfianÃ§a de 98%, Utilizando a FunÃ§Ã£o
 t.test(TecNova, conf = 0.98)
 
-# Intervalo Sem Uso da Função
+# Intervalo Sem Uso da FunÃ§Ã£o
 alfa = 0.02
 n = length(valores)
 desvio = sd(valores)
@@ -126,7 +126,7 @@ erro
 
 cat("(", media - erro, ",", media + erro, ")")
 
-# Letra b) Considerando o Nível de Significância de 4%
+# Letra b) Considerando o NÃ­vel de SignificÃ¢ncia de 4%
 
 t.test(TecAtual, TecNova, alternative = 'greater', conf = 0.96)
 
